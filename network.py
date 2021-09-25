@@ -5,6 +5,7 @@ import torchvision as tv
 import math
 
 from util.block import *
+from util.network_module import *
 import utils
 
 # ----------------------------------------

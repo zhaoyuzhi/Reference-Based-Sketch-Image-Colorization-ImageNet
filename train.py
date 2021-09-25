@@ -57,7 +57,7 @@ if __name__ == "__main__":
     parser.add_argument('--yaml_path', type = str, \
         default = './options/cvpr2020.yaml', \
             help = 'yaml_path')
-    parser.add_argument('--network', type = str, default = 'NRC', help = 'network name')
+    parser.add_argument('--network', type = str, default = 'Generator', help = 'network name')
     parser.add_argument('--save_path', type = str, default = './models', help = 'saving path that is a folder')
     parser.add_argument('--sample_path', type = str, default = './samples', help = 'training samples path that is a folder')
     parser.add_argument('--save_mode', type = str, default = 'epoch', help = 'saving mode, and by_epoch saving is recommended')
@@ -69,16 +69,16 @@ if __name__ == "__main__":
     parser.add_argument('--multi_gpu', type = bool, default = False, help = 'True for more than 1 GPU')
     parser.add_argument('--cudnn_benchmark', type = bool, default = True, help = 'True for unchanged input data type')
     # Training parameters
-    parser.add_argument('--epochs', type = int, default = 300, help = 'number of epochs of training')
-    parser.add_argument('--train_batch_size', type = int, default = 1, help = 'size of the batches')
+    parser.add_argument('--epochs', type = int, default = 40, help = 'number of epochs of training')
+    parser.add_argument('--train_batch_size', type = int, default = 8, help = 'size of the batches')
     parser.add_argument('--val_batch_size', type = int, default = 1, help = 'size of the batches')
     parser.add_argument('--lr_g', type = float, default = 0.0001, help = 'Adam: learning rate for G / D')
-    parser.add_argument('--lr_d', type = float, default = 0.0001, help = 'Adam: learning rate for G / D')
+    parser.add_argument('--lr_d', type = float, default = 0.0002, help = 'Adam: learning rate for G / D')
     parser.add_argument('--b1', type = float, default = 0.5, help = 'Adam: decay of first order momentum of gradient')
     parser.add_argument('--b2', type = float, default = 0.999, help = 'Adam: decay of second order momentum of gradient')
     parser.add_argument('--weight_decay', type = float, default = 0, help = 'weight decay for optimizer')
     parser.add_argument('--lr_decrease_epoch', type = int, default = 150, help = 'lr decrease at certain epoch and its multiple')
-    parser.add_argument('--num_workers', type = int, default = 0, help = 'number of cpu threads to use during batch generation')
+    parser.add_argument('--num_workers', type = int, default = 8, help = 'number of cpu threads to use during batch generation')
     parser.add_argument('--lambda_l1', type = float, default = 30, help = 'coefficient for GAN Loss')
     parser.add_argument('--lambda_p', type = float, default = 0.01, help = 'coefficient for GAN Loss')
     parser.add_argument('--lambda_s', type = float, default = 50, help = 'coefficient for GAN Loss')
@@ -90,7 +90,7 @@ if __name__ == "__main__":
     parser.add_argument('--init_gain', type = float, default = 0.02, help = 'initialization gain of networks')
     # Dataset parameters
     parser.add_argument('--baseroot_train', type = str, \
-        default = 'E:\\submitted papers\\QuadBayer Deblur\\data\\train', \
+        default = '/home/mybeast/zhaoyuzhi/ILSVRC2012_train_256', \
             help = 'input image baseroot')
     parser.add_argument('--baseroot_val', type = str, \
         default = 'E:\\submitted papers\\QuadBayer Deblur\\data\\val', \
@@ -109,5 +109,6 @@ if __name__ == "__main__":
     attatch_to_config(opt, yaml_args)
     print(opt)
 
-    trainer.Trainer(opt)
+    trainer.L1_Trainer(opt)
+    # trainer.Trainer(opt)
     

@@ -9,10 +9,11 @@ class ResBlock(nn.Module):
         super(ResBlock, self).__init__()
         self.main = nn.Sequential(
             nn.Conv2d(in_channels, out_channels, kernel_size=3, stride=1, padding=1, bias=False),
-            nn.BatchNorm2d(out_channels, affine=True, track_running_stats=True),
+            #nn.BatchNorm2d(out_channels, affine=True, track_running_stats=True),
             nn.ReLU(inplace=True),
-            nn.Conv2d(out_channels, out_channels, kernel_size=3, stride=1, padding=1, bias=False),
-            nn.BatchNorm2d(out_channels, affine=True, track_running_stats=True))
+            nn.Conv2d(out_channels, out_channels, kernel_size=3, stride=1, padding=1, bias=False)
+            #nn.BatchNorm2d(out_channels, affine=True, track_running_stats=True)
+        )
 
     def forward(self, x):
         return self.main(x) + x
@@ -30,14 +31,14 @@ class ConvBlock(nn.Module):
         if spec_norm:
             self.main = nn.Sequential(
                 SpectralNorm(nn.Conv2d(dim_in, dim_out, kernel_size=3, stride=stride, padding=1, bias=False)),
-                nn.BatchNorm2d(dim_out, affine=True, track_running_stats=True),
+                #nn.BatchNorm2d(dim_out, affine=True, track_running_stats=True),
                 nn.LeakyReLU(LR, inplace=False),
             )
 
         else:
             self.main = nn.Sequential(
                 nn.Conv2d(dim_in, dim_out, kernel_size=3, stride=stride, padding=1, bias=False),
-                nn.BatchNorm2d(dim_out, affine=True, track_running_stats=True),
+                #nn.BatchNorm2d(dim_out, affine=True, track_running_stats=True),
                 nn.LeakyReLU(LR, inplace=False),
             )
 

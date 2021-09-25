@@ -1,15 +1,14 @@
 name: "Generator"
 load_name: "./models"
-vgg_name: "/mnt/lustre/zhaoyuzhi/vgg16_pretrained.pth"
+vgg_name: "./vgg16_pretrained.pth" # download first, then change to your path
 
 Network:
   init_type: "normal"
   init_gain: 0.02
 
 Dataset:
-  baseroot_train: "/mnt/lustre/zhaoyuzhi/dataset/ILSVRC2012_train_256"
-  baseroot_val: "/mnt/lustre/zhaoyuzhi/dataset/ILSVRC2012_val_256"
-  saveroot: "./val_results"
+  baseroot_train: "/home/mybeast/zhaoyuzhi/ILSVRC2012_train_256" # change to your path
+  baseroot_val: "/mnt/lustre/zhaoyuzhi/dataset/ILSVRC2012_val_256" # just ignore this
   noise_type: "uniform"
   a: -1
   b: 1
@@ -23,14 +22,14 @@ Training:
   save_path: "./models"
   sample_path: "./samples"
   save_mode: 'epoch'
-  save_by_epoch: 10
+  save_by_epoch: 5
   save_by_iter: 10000
   lr_g: 0.0001
   lr_d: 0.0002
   b1: 0.5
   b2: 0.999
   weight_decay: 0.0
-  train_batch_size: 4
+  train_batch_size: 16
   val_batch_size: 1
   epochs: 40
   lr_decrease_epoch: 10
