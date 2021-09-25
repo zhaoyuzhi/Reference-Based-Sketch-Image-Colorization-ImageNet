@@ -34,10 +34,10 @@ Training:
   epochs: 40
   lr_decrease_epoch: 10
   num_workers: 8
-  lambda_l1: 1
-  lambda_p: 1
+  lambda_l1: 10
+  lambda_p: 10
   lambda_s: 0
-  lambda_gan: 0
+  lambda_gan: 1
   lambda_tr: 0
   margin_tr: 0
 
