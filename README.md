@@ -6,19 +6,19 @@ We will provide pre-trained model on ImageNet dataset shortly
 
 ## 1 Training
 
-- Prepare the ImageNet dataset
+- Prepare the ImageNet dataset (i.e., upload ILSVRC2012_train_256 folder to your server)
 
 - Download the PyTorch official pre-trained VGG-16 model, and then rename it to 'vgg16_pretrained.pth'
 
 (torchvision webpage: https://github.com/pytorch/vision/blob/main/torchvision/models/vgg.py)
 
-(download webpage: https://download.pytorch.org/models/vgg16-397923af.pth)
+(download webpage: https://download.pytorch.org/models/vgg16-397923af.pth) (this is good)
 
 - Change the parameter in yaml file and run
 
-(vgg_name -> your VGG-16 model path)
+(--vgg_name -> your VGG-16 model path)
 
-(baseroot_train -> your ImageNet dataset path)
+(--baseroot_train -> your ImageNet dataset path, i.e., ILSVRC2012_train_256 path)
 
 ```bash
 sh sbatch_run.sh or sh local_run.sh
