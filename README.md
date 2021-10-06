@@ -30,45 +30,45 @@ By the way, I use 8 Titan GPUs to train the network with batch size of 64, epoch
 
 The forward of GAN discriminator and VGG-16 take a lot of time, which are used to compute GAN loss and perceptual loss, etc.
 
-### 1.2 Some snapshots in the training
+### 1.2 Training Snapshots
 
-iteration 1: input grayscale - input reference (transformed from GT) - generated sample - GT
+epoch 1: input grayscale - input reference (transformed from GT) - generated sample - GT
 
 <img src="./samples/Generator_uniform_tps/train_iter1_grayscale.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter1_ref.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter1_out.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter1_rgb.png" width="200"/>
 
-iteration 2: input grayscale - input reference (transformed from GT) - generated sample - GT
+epoch 2: input grayscale - input reference (transformed from GT) - generated sample - GT
 
 <img src="./samples/Generator_uniform_tps/train_iter2_grayscale.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter2_ref.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter2_out.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter2_rgb.png" width="200"/>
 
-iteration 3: input grayscale - input reference (transformed from GT) - generated sample - GT
+epoch 3: input grayscale - input reference (transformed from GT) - generated sample - GT
 
 <img src="./samples/Generator_uniform_tps/train_iter3_grayscale.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter3_ref.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter3_out.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter3_rgb.png" width="200"/>
 
-iteration 4: input grayscale - input reference (transformed from GT) - generated sample - GT
+epoch 4: input grayscale - input reference (transformed from GT) - generated sample - GT
 
 <img src="./samples/Generator_uniform_tps/train_iter4_grayscale.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter4_ref.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter4_out.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter4_rgb.png" width="200"/>
 
-iteration 5: input grayscale - input reference (transformed from GT) - generated sample - GT
+epoch 5: input grayscale - input reference (transformed from GT) - generated sample - GT
 
 <img src="./samples/Generator_uniform_tps/train_iter5_grayscale.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter5_ref.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter5_out.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter5_rgb.png" width="200"/>
 
-iteration 6: input grayscale - input reference (transformed from GT) - generated sample - GT
+epoch 6: input grayscale - input reference (transformed from GT) - generated sample - GT
 
 <img src="./samples/Generator_uniform_tps/train_iter6_grayscale.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter6_ref.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter6_out.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter6_rgb.png" width="200"/>
 
-iteration 7: input grayscale - input reference (transformed from GT) - generated sample - GT
+epoch 7: input grayscale - input reference (transformed from GT) - generated sample - GT
 
 <img src="./samples/Generator_uniform_tps/train_iter7_grayscale.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter7_ref.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter7_out.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter7_rgb.png" width="200"/>
 
-iteration 8: input grayscale - input reference (transformed from GT) - generated sample - GT
+epoch 8: input grayscale - input reference (transformed from GT) - generated sample - GT
 
 <img src="./samples/Generator_uniform_tps/train_iter8_grayscale.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter8_ref.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter8_out.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter8_rgb.png" width="200"/>
 
-iteration 9: input grayscale - input reference (transformed from GT) - generated sample - GT
+epoch 9: input grayscale - input reference (transformed from GT) - generated sample - GT
 
 <img src="./samples/Generator_uniform_tps/train_iter9_grayscale.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter9_ref.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter9_out.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter9_rgb.png" width="200"/>
 
-iteration 10: input grayscale - input reference (transformed from GT) - generated sample - GT
+epoch 10: input grayscale - input reference (transformed from GT) - generated sample - GT
 
 <img src="./samples/Generator_uniform_tps/train_iter10_grayscale.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter10_ref.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter10_out.png" width="200"/><img src="./samples/Generator_uniform_tps/train_iter10_rgb.png" width="200"/>
 
