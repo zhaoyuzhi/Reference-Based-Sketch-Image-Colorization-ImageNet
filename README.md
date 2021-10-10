@@ -4,6 +4,8 @@ This is a PyTorch implementation of CVPR 2020 paper (Reference-Based Sketch Imag
 
 We will provide pre-trained model on ImageNet dataset shortly
 
+<img src="./img/network.png"/>
+
 ## 1 Training
 
 ### 1.1 Procedure
@@ -26,7 +28,7 @@ We will provide pre-trained model on ImageNet dataset shortly
 sh sbatch_run.sh or sh local_run.sh
 ```
 
-By the way, I use 8 Titan GPUs to train the network with batch size of 64, epoch of 40. It takes approximately 10 days!
+I use 8 Titan GPUs to train the network with batch size of 64, epoch of 40 (a epoch includes 1281167 training images). It takes approximately 15 days!
 
 The forward of GAN discriminator and VGG-16 take a lot of time, which are used to compute GAN loss and perceptual loss, etc.
 
